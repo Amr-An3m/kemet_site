@@ -280,6 +280,7 @@ header {
   right: 0;
   z-index: 50;
   transition: all 0.3s ease;
+  height: 70px;
 }
 
 header.scrolled {
@@ -327,11 +328,12 @@ header:not(.scrolled) {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: 70px; 
+  min-height: calc(100vh - 70px);
 }
 
 .hero-bg {
@@ -413,14 +415,20 @@ header:not(.scrolled) {
 }
 
 @media (min-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+  }
+
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
